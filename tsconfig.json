@@ -12,11 +12,15 @@
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
     "sourceMap": true,
-    "baseUrl": ".",
     "moduleResolution": "Node",
     "outDir": "./dist",
     "rootDir": "./src",
-    "newLine": "lf"
+    "newLine": "lf",
+    "baseUrl": "./src",
+    "paths": {
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["**/node_modules", "**/*.test.ts","**/__tests__", "**/dest"]
