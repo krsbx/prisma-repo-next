@@ -2,7 +2,7 @@
   "name": "prisma-generator-repo",
   "description": "Alternative of prisma-repo made by @krsbx",
   "version": "1.0.0",
-  "main": "dist/generator.js",
+  "main": "dist/generator/index.js",
   "license": "MIT",
   "bin": {
     "prisma-generator-repo": "dist/bin.js"
@@ -22,7 +22,8 @@
     "@prisma/client": "3.12.0",
     "@prisma/generator-helper": "3.12.0",
     "@prisma/sdk": "3.12.0",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "template-file": "^6.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
@@ -31,7 +32,10 @@
     "@types/figlet": "^1.5.4",
     "@types/fs-extra": "^9.0.13",
     "@types/gradient-string": "^1.1.2",
+    "@types/jest": "27.0.3",
     "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.21",
+    "@types/prettier": "2.4.2",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "eslint": "^8.22.0",
@@ -41,16 +45,13 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
+    "jest": "27.4.7",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "tsup": "^6.2.2",
-    "typescript": "^4.7.4",
-    "@types/jest": "27.0.3",
-    "@types/node": "17.0.21",
-    "@types/prettier": "2.4.2",
-    "jest": "27.4.7",
     "prisma": "3.12.0",
-    "ts-jest": "27.1.4"
+    "ts-jest": "27.1.4",
+    "tsup": "^6.2.2",
+    "typescript": "^4.7.4"
   },
   "homepage": "Link to homepage or github readme here",
   "repository": {
