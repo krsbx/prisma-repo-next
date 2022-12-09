@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import BaseRepository from './baseRepository';
-import { AnyRecord, ModelStructure, ModelTypes, ModelScalarFields, MODELS_NAME  } from '@krsbx/prisma-repo/prisma-repo';
+import { AnyRecord, ModelStructure, ModelTypes, ModelScalarFields, MODELS_NAME } from './prisma-repo';
 
 // This type will be used if you want to extends the functions in {{ repository }} Class
 

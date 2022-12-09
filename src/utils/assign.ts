@@ -23,7 +23,7 @@ export const assignRepositories = (
   prismaStructures.push(model.name);
   modelsName.push({
     key: constantCase(model.name),
-    value: camelCase(model.name),
+    value: `'${camelCase(model.name)}'`,
   });
   modelStructure.push({
     key: camelCase(model.name),

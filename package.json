@@ -1,19 +1,19 @@
 {
-  "name": "prisma-generator-repo",
+  "name": "@krsbx/prisma-repo",
   "description": "Alternative of prisma-repo made by @krsbx",
   "version": "1.0.0",
   "main": "dist/generator/index.js",
   "license": "MIT",
   "bin": {
-    "prisma-generator-repo": "dist/bin.js"
+    "prisma-repo": "dist/bin/index.js"
   },
   "engines": {
     "node": ">=14.0"
   },
   "scripts": {
-    "start": "node dist/bin.js",
+    "start": "node dist/bin/index.js",
     "dev": "npx tsc -w",
-    "build": "npx tsc",
+    "build": "npx tsc && npx tsc-alias",
     "prepack": "yarn build",
     "test": "jest",
     "prepare": "husky install"
@@ -22,7 +22,8 @@
     "@prisma/client": "3.12.0",
     "@prisma/generator-helper": "3.12.0",
     "@prisma/sdk": "3.12.0",
-    "prettier": "2.5.1",
+    "app-root-path": "^3.1.0",
+    "prettier": "^2.8.1",
     "template-file": "^6.0.1"
   },
   "devDependencies": {
@@ -33,9 +34,8 @@
     "@types/fs-extra": "^9.0.13",
     "@types/gradient-string": "^1.1.2",
     "@types/jest": "27.0.3",
-    "@types/lodash": "^4.14.182",
     "@types/node": "^17.0.21",
-    "@types/prettier": "2.4.2",
+    "@types/prettier": "^2.7.1",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "eslint": "^8.22.0",
@@ -47,9 +47,9 @@
     "husky": "^8.0.1",
     "jest": "27.4.7",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
     "prisma": "3.12.0",
     "ts-jest": "27.1.4",
+    "tsc-alias": "^1.7.1",
     "tsup": "^6.2.2",
     "typescript": "^4.7.4"
   },
