@@ -1,7 +1,7 @@
 {
   "name": "@krsbx/prisma-repo",
   "description": "Alternative of prisma-repo made by @krsbx",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "dist/generator/index.js",
   "license": "MIT",
   "bin": {
@@ -13,7 +13,7 @@
   "scripts": {
     "start": "node dist/bin/index.js",
     "dev": "npx tsc -w",
-    "build": "npx tsc --project tsconfig.build.json && npx tsc-alias",
+    "build": "npx tsc && npx tsc-alias",
     "prepack": "yarn build",
     "test": "jest --verbose",
     "test:dev": "jest --watchAll --verbose",

@@ -2,8 +2,9 @@ src
 node_modules
 tsconfig.json
 README.md
-jest.config.js
+jest.config.ts
 yarn.lock
 yarn-error.log
 .pnpm-debug.log
 out
+/krsbx-prisma-repo-*
