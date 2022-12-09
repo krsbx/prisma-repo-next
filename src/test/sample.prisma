@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator repo {
+  provider = "node ../../dist/bin"
+  output   = "out"
+  query    = true
+  warn     = false
+  info     = true
+  error    = false
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Post Post[]
+}
+
+enum NotificationType {
+  newPosts
+  newComments
+  newFollowers
+  reply
+  heartOnPost
+  heartOnComment
+  heartOnReply
+}
+
+enum Language {
+  Typescript
+  Javascript
+  Rust
+  Go
+  Python
+  Cpp
+}
+
+enum State {
+  Active
+  Pending
+  Banned
+}
