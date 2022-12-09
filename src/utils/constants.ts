@@ -1,7 +1,7 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
+import appRootPath from 'app-root-path';
 
-export const GENERATOR_NAME = 'prisma-generator-repo';
+export const GENERATOR_NAME = 'Prisma Repo Generator';
 
 export const TYPE_SUFFIX = {
   WHERE_INPUT: 'WhereInput',
@@ -15,8 +15,15 @@ export const TYPE_SUFFIX = {
   GROUP_BY: 'GroupByOutputType',
 } as const;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const __filename = fileURLToPath(import.meta.url); // eslint-disable-line no-underscore-dangle
-const distPath = path.dirname(__filename);
-export const PKG_ROOT = path.join(distPath, '../');
+export const DEFAULT_PATH = `${appRootPath.path}/src/repository`;
+
+export const PRISMA_LOGGER = {
+  QUERY: 'query',
+  INFO: 'info',
+  WARN: 'warn',
+  ERROR: 'error',
+} as const;
+
+export const PRISMA_LOGGER_VALUES = Object.values(PRISMA_LOGGER) as PR.PrismaLoggerType[];
+
+export const PKG_ROOT = path.join(__dirname, '../../');
