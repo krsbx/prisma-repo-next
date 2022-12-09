@@ -18,10 +18,15 @@
     "newLine": "lf",
     "baseUrl": "./src",
     "paths": {
+      "test": ["test/*"],
+      "helpers/*": ["helpers/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"]
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["**/node_modules", "**/*.test.ts","**/__tests__", "**/dest"]
+  "exclude": ["**/node_modules", "**/*.test.ts","**/test", "**/dest"],
+  "ts-node": {
+    "files": true,
+  }
 }
