@@ -16,7 +16,7 @@ generatorHandler({
     logger.info(`${GENERATOR_NAME}:Registered`);
     return {
       version,
-      defaultOutput: '../generated',
+      defaultOutput: DEFAULT_PATH,
       prettyName: GENERATOR_NAME,
     };
   },
