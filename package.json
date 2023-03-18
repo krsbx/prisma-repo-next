@@ -1,7 +1,7 @@
 {
   "name": "@krsbx/prisma-repo",
   "description": "Alternative of prisma-repo made by @krsbx",
-  "version": "0.1.0",
+  "version": "0.2.5",
   "main": "dist/generator/index.js",
   "license": "MIT",
   "bin": {
@@ -55,12 +55,8 @@
     "tsup": "^6.2.2",
     "typescript": "^4.7.4"
   },
-  "homepage": "Link to homepage or github readme here",
-  "repository": {
-    "type": "git",
-    "url": "Repo link here"
-  },
-  "author": "Your Name <Your Email>",
+  "repository": "git@github.com:krsbx/prisma-repo-next.git",
+  "author": "krsbx <firdaus.sati51@gmail.cm>",
   "keywords": [
     "prisma",
     "prisma2",

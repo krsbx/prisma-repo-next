@@ -41,6 +41,7 @@ export const assignRepositories = (
       WhereInput: `Prisma.${model.name}WhereInput`,
       Delegate: `Prisma.${model.name}Delegate`,
       Select: `Prisma.${model.name}Select`,
+      Return: `Prisma.${model.name}GetPayload<T>`,
     },
   });
 };

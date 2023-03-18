@@ -59,8 +59,9 @@ export type ModelTypes<T extends string> = {
     | 'unknown';
   [TYPE_SUFFIX.DELEGATE]: `Prisma.${T}${typeof TYPE_SUFFIX.DELEGATE}` | 'unknown';
   [TYPE_SUFFIX.GROUP_BY]: `Prisma.${T}${typeof TYPE_SUFFIX.GROUP_BY}` | 'unknown';
+  [TYPE_SUFFIX.RETURN]: `Prisma.${T}GetPayload<T>` | 'unknown';
 };
 
-export type TypeSuffix = typeof TYPE_SUFFIX[keyof typeof TYPE_SUFFIX];
+export type TypeSuffix = (typeof TYPE_SUFFIX)[keyof typeof TYPE_SUFFIX];
 
 export as namespace PR;
