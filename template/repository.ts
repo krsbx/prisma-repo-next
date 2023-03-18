@@ -13,7 +13,7 @@ type Update = ModelTypes[typeof {{ repositoryName }}]['Update'];
 type Cursor = ModelTypes[typeof {{ repositoryName }}]['Cursor'];
 type Order = ModelTypes[typeof {{ repositoryName }}]['Order'];
 type Delegate = ModelTypes[typeof {{ repositoryName }}]['Delegate'];
-type GroupBy = ModelStructure[typeof {{ repositoryName }}]['GroupBy'];
+type GroupBy = ModelTypes[typeof {{ repositoryName }}]['GroupBy'];
 type Scalar = ModelScalarFields<typeof {{ repositoryName }}>;
 type Model = ModelStructure[typeof {{ repositoryName }}];
 /*  eslint-enable @typescript-eslint/no-unused-vars */

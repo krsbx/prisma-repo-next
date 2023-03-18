@@ -4,7 +4,7 @@ import path from 'path';
 import * as templateFile from 'template-file';
 import { assignRepositories } from 'utils/assign';
 import { camelCase, constantCase } from 'utils/common';
-import { DEFAULT_PATH, GENERATOR_NAME, PKG_ROOT } from 'utils/constants';
+import { GENERATOR_NAME, PKG_ROOT } from 'utils/constants';
 import { getPrismaLogger } from 'utils/prisma';
 import { copyFile, writeFileSafely } from 'utils/writeFileSafely';
 
@@ -16,13 +16,11 @@ generatorHandler({
     logger.info(`${GENERATOR_NAME}:Registered`);
     return {
       version,
-      defaultOutput: DEFAULT_PATH,
       prettyName: GENERATOR_NAME,
     };
   },
   onGenerate: async (options: CustomGeneratorOptions) => {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-non-null-asserted-optional-chain
-    const basePath = options.generator.output?.value ?? DEFAULT_PATH;
+    const basePath = options.generator.output?.value ?? options.schemaPath;
     const rootDir = path.join(PKG_ROOT, 'template');
     const repoTemplatePath = path.join(rootDir, 'repository.ts');
     const baseRepoTemplatePath = path.join(rootDir, 'baseRepository.ts');

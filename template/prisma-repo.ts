@@ -66,7 +66,7 @@ export type ModelScalarFields<T extends keyof ModelStructure> = Prisma.Enumerabl
 
 export type ModelDelegate = Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined;
 
-export type ModelTypes = {
+export type ModelTypes<T = unknown> = {
 {{ #modelTypes }}
   {{ key }}: {
     Where: {{ value.WhereInput }};
@@ -78,6 +78,8 @@ export type ModelTypes = {
     Order: {{ value.OrderByWithRelationInput }};
     Delegate: {{ value.Delegate }}<ModelDelegate>;
     GroupBy: {{ value.GroupByOutputType }};
+    // @ts-ignore
+    Return: {{ value.Return }};
   },
 {{ /modelTypes }}
 };
