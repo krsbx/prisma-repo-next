@@ -1,5 +1,4 @@
 import path from 'path';
-import appRootPath from 'app-root-path';
 
 export const GENERATOR_NAME = 'Prisma Repo Generator';
 
@@ -15,8 +14,6 @@ export const TYPE_SUFFIX = {
   GROUP_BY: 'GroupByOutputType',
   RETURN: 'Return',
 } as const;
-
-export const DEFAULT_PATH = `${appRootPath.path}/src/repository`;
 
 export const PRISMA_LOGGER = {
   QUERY: 'query',
