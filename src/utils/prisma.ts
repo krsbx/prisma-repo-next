@@ -7,10 +7,10 @@ const convertToString = (value: PR.PrismaLoggerType[]) =>
 export const getPrismaLogger = (config: CustomGeneratorOptions['generator']['config']) => {
   const loggerSettings: PR.PrismaLoggerType[] = [];
 
-  if (config.error === 'true') loggerSettings.push(PRISMA_LOGGER.ERROR);
-  if (config.info === 'true') loggerSettings.push(PRISMA_LOGGER.INFO);
-  if (config.query === 'true') loggerSettings.push(PRISMA_LOGGER.QUERY);
-  if (config.warn === 'true') loggerSettings.push(PRISMA_LOGGER.WARN);
+  if (Boolean(config.error) === true) loggerSettings.push(PRISMA_LOGGER.ERROR);
+  if (Boolean(config.info) === true) loggerSettings.push(PRISMA_LOGGER.INFO);
+  if (Boolean(config.query) === true) loggerSettings.push(PRISMA_LOGGER.QUERY);
+  if (Boolean(config.warn) === true) loggerSettings.push(PRISMA_LOGGER.WARN);
 
   return convertToString(loggerSettings);
 };

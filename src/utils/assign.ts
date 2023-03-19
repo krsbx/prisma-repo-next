@@ -1,5 +1,6 @@
 import { DMMF } from '@prisma/generator-helper';
-import { camelCase, constantCase } from './common';
+import camelCase from 'lodash.camelcase';
+import { constantCase } from './common';
 
 export const assignRepositories = (
   prismaStructures: string[],

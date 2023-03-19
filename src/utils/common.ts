@@ -1,11 +1,6 @@
 import fs from 'fs';
+import snakeCase from 'lodash.snakecase';
 
-export const camelCase = (value: string) =>
-  value
-    .replace(/\s(.)/g, (str) => str.toUpperCase())
-    .replace(/\s/g, '')
-    .replace(/^(.)/, (str) => str.toLowerCase());
-
-export const constantCase = (value: string) => value.toUpperCase().replace(/ /g, '_');
+export const constantCase = (value: string) => snakeCase(value).toUpperCase();
 
 export const isExist = (filePath: string) => fs.existsSync(filePath);
