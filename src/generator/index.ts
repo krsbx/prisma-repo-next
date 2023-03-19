@@ -1,9 +1,10 @@
 import { CustomGeneratorOptions, generatorHandler } from '@prisma/generator-helper';
-import { logger } from '@prisma/sdk';
+import { logger } from '@prisma/internals';
 import path from 'path';
+import camelCase from 'lodash.camelcase';
 import * as templateFile from 'template-file';
 import { assignRepositories } from 'utils/assign';
-import { camelCase, constantCase } from 'utils/common';
+import { constantCase } from 'utils/common';
 import { GENERATOR_NAME, PKG_ROOT } from 'utils/constants';
 import { getPrismaLogger } from 'utils/prisma';
 import { copyFile, writeFileSafely } from 'utils/writeFileSafely';

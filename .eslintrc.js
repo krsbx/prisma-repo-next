@@ -23,6 +23,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
     'no-console': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
   settings: {
     'import/parsers': {
