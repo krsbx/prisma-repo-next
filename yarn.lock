@@ -943,6 +943,15 @@
     debug "4.3.4"
     strip-ansi "6.0.1"
 
+"@prisma/debug@4.13.0":
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-4.13.0.tgz#22ea918572164764e74d8f25371b5a20b2590ec1"
+  integrity sha512-JrltTewF/paRb5mcM5OvcEi9DtdX0sINOAswruxKQrwOLA7Phqb52OfY38MIzGrsrJ8iUGVqQ5bpYZYpxOGCsQ==
+  dependencies:
+    "@types/debug" "4.1.7"
+    debug "4.3.4"
+    strip-ansi "6.0.1"
+
 "@prisma/engine-core@4.11.0":
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/@prisma/engine-core/-/engine-core-4.11.0.tgz#d9e47486b23161a9a75ac877914e5a77bb198c51"
@@ -997,12 +1006,22 @@
     temp-dir "2.0.0"
     tempy "1.0.1"
 
-"@prisma/generator-helper@4.11.0", "@prisma/generator-helper@^4.11.0":
+"@prisma/generator-helper@4.11.0":
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/@prisma/generator-helper/-/generator-helper-4.11.0.tgz#e956ac3a9021fe418bb4f8d52d1fce289f336416"
   integrity sha512-hHP2sqMT7xPbFOVQQ1HrGFbCG1mV1DHiiUC7wceJfpWMMuBIBZhQVsayNspHk3V5Y+HeOOUruE+qPNHXk2Botg==
   dependencies:
     "@prisma/debug" "4.11.0"
+    "@types/cross-spawn" "6.0.2"
+    chalk "4.1.2"
+    cross-spawn "7.0.3"
+
+"@prisma/generator-helper@^4.11.0":
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/@prisma/generator-helper/-/generator-helper-4.13.0.tgz#4a665bba70681509003f0a8b34607835e80664c7"
+  integrity sha512-Zx9rtbsEIU/9DKnGRvmjLdyeyhzeeXNFp1alkRh1w//rQ5jTcobiay/jU4Qo+EQOs2bnWEfUeiBoOjfaysdLNg==
+  dependencies:
+    "@prisma/debug" "4.13.0"
     "@types/cross-spawn" "6.0.2"
     chalk "4.1.2"
     cross-spawn "7.0.3"
